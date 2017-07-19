@@ -1,6 +1,3 @@
-
-
-
 let comments=[
     '1',
     '2'

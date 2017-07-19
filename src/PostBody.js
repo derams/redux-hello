@@ -1,22 +1,42 @@
-import React,  { Component } from "react"
-import store from './store'
-import {connect} from 'react-redux'
+// import React,  { Component } from "react"
+//
+// import {connect} from 'react-redux'
+//
+// class PostBody extends Component{
+//
+//   render(){
+//     return(
+//       <div className="post-body">
+//
+//         <div className="comment-num num">
+//           {this.props.comments.length}
+//         </div>
+//
+//       </div>
+//     )
+//   }
+// }
+// const mapStateToProps = (state) =>({
+//   comment:state
+// })
+// export default connect(mapStateToProps)(PostBody)
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-class PostBody extends Component{
-
-  render(){
-    return(
+class PostBody extends Component {
+  render() {
+    return (
       <div className="post-body">
-        this.props.comments.length
-        <div>
+        <div className="comment-num num">
           {this.props.comments.length}
         </div>
-
       </div>
-    )
+    );
   }
 }
-const mapStateToProps = (state) =>({
-  comment:state
+
+const mapStateToProps = (state) => ({
+  comments: state
 })
+
 export default connect(mapStateToProps)(PostBody)
