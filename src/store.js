@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
 
-import commentReducer from './reducers/comment'
+import rootReducer from './reducers/'
 
 
-let store = createStore(commentReducer)
+let store = createStore(rootReducer)
 export default store;
