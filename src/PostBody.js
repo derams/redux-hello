@@ -1,6 +1,8 @@
 import React,  { Component } from "react"
 import store from './store'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+
 
 class PostBody extends Component{
 handleAdd = () => {
@@ -13,9 +15,12 @@ handleAdd = () => {
     let currentPost = posts.filter(value => value.postId === postId )[0]
     return(
       <div className="post-body">
-        <div className="title">
-          {currentPost.title}
-        </div>
+        <Link to={`/post/${postId}`}>
+          <div className="title">
+            {currentPost.title}
+          </div>
+        </Link>
+
         <div className="likes-num num" onClick={this.handleAdd}>
           {currentPost.likes}赞
         </div>
